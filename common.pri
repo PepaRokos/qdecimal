@@ -6,7 +6,7 @@
 #DEFINES += DECEXTFLAG=1     # default is 1
 #DEFINES += DECLITEND=0     # default is 1
 
-CONFIG += debug
+#CONFIG += debug
 
 
 if(win32) {
@@ -24,7 +24,7 @@ if(win32) {
    #msvc2010 onwards above flags are deprecated.	
 
    # Use Run-time checks for stack corruption and uninitialized var use
-   QMAKE_CXXFLAGS += /RTC1
+   #QMAKE_CXXFLAGS += /RTC1
  }
 
 } # end win32
