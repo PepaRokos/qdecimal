@@ -153,6 +153,10 @@ class QDECIMAL_EXPORT QDecDouble
   }
 
   double toDouble() const;
+
+  int32_t toInt32(QDecContext* c = 0) const {
+    return decDoubleToInt32(&m_data, CXT(c), DEC_ROUND_HALF_UP);
+  }
     
   QByteArray toEngString() const {
     char str[MaxStrSize] = { 0 };
