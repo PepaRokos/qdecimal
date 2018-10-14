@@ -15,6 +15,7 @@
 void MessageOutput(QtMsgType type, const QMessageLogContext &context,
                      const QString &msg)
 {
+  Q_UNUSED(context)
   QByteArray lmsg = msg.toLocal8Bit();
   const char* cmsg = lmsg.constData();
   switch (type) {
