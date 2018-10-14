@@ -10,7 +10,7 @@ TEMPLATE = lib
 CONFIG += static
 DEPENDPATH += .
 TARGET = decnumber
-DESTDIR = ../lib
+DESTDIR = $$OUT_PWD/../lib
 
 
 
