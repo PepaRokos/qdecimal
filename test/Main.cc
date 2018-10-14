@@ -21,6 +21,11 @@ void MessageOutput(QtMsgType type, const QMessageLogContext &context,
     case QtDebugMsg:
       fprintf(stderr, "%s\n", cmsg);
       break;
+#if QT_VERSION >= QT_VERSION_CHECK(5, 5, 0)
+    case QtInfoMsg:
+      fprintf(stderr, "Info: %s\n", cmsg);
+      break;
+#endif
     case QtWarningMsg:
       fprintf(stderr, "Warn: %s\n", cmsg);
       break;
