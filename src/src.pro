@@ -4,6 +4,7 @@
 include(../common.pri)
 
 QT -= gui
+QT += core
 TEMPLATE = lib
 
 # Pick if the library will be static or dynamic:
@@ -17,9 +18,9 @@ CONFIG += static
 TARGET = qdecimal
 DEPENDPATH += .
 # To include decnumber headers
-INCLUDEPATH += ../decnumber
-DESTDIR = ../lib
-LIBS += -L../lib -ldecnumber 
+INCLUDEPATH += $$PWD/../decnumber
+DESTDIR = $$OUT_PWD/../lib
+LIBS += -L$$OUT_PWD/../lib -ldecnumber 
 
 # Input
 HEADERS += QDecContext.hh \

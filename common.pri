@@ -9,7 +9,7 @@
 #CONFIG += debug
 
 
-if(win32) {
+win32 {
  INCLUDEPATH += .
  # Remove Qt's defaults
  QMAKE_CXXFLAGS -= -Zc:wchar_t-
@@ -28,7 +28,7 @@ if(win32) {
  }
 
 } # end win32
-else {
+else:equals(OUT_PWD, $$PWD) {
  MOC_DIR = moc
  OBJECTS_DIR = obj
 }

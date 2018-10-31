@@ -4,14 +4,15 @@
 include(../common.pri)
 
 QT -= gui
+QT += core
 TEMPLATE = app
 QT  += testlib 
 
 TARGET = qdecimal_test
-DESTDIR = ../bin
+DESTDIR = $$OUT_PWD/../bin
 DEPENDPATH += .
-INCLUDEPATH += ../decnumber ../src
-LIBS += -L../lib -lqdecimal -ldecnumber
+INCLUDEPATH += $$PWD/../decnumber $$PWD/../src
+LIBS += -L$${OUT_PWD}/../lib -lqdecimal -ldecnumber
 
 # Input
 HEADERS += QDecNumberTests.hh
